@@ -1,4 +1,9 @@
 class Airports{
+/**
+ * The hashCode() method returns a hash code value for the object
+ * 
+ * @return The hashcode of the object.
+ */
 @Override
     public int hashCode() {
         final int prime = 31;
@@ -19,6 +24,13 @@ class Airports{
 
 
 
+/**
+ * If the object is not null, and the object is of the same class, then check if the values of the
+ * object are equal to the values of the other object. If they are, then return true. If they are not,
+ * then return false
+ * 
+ * @param obj The object to compare this instance against.
+ */
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -128,6 +140,11 @@ class Airports{
     private String source;
 
     
+/**
+ * The toString() method returns a string representation of the object
+ * 
+ * @return The toString method is being returned.
+ */
     @Override
     public String toString() {
         return "Airports [airportID=" + airportID + ", airportName=" + airportName + ", altitude=" + altitude

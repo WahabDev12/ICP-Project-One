@@ -12,6 +12,8 @@ class Airlines{
 
 
 
+
+// A constructor.
     public Airlines(int airline_ID, String name, String alias, String iata_code, String icao_code, String callsign,
             String country, String active) {
         this.airline_ID = airline_ID;
@@ -50,6 +52,11 @@ class Airlines{
 
 
     
+/**
+ * The toString() method returns a string representation of the object
+ * 
+ * @return The toString method is being returned.
+ */
     @Override
     public String toString() {
         return "Airlines [active=" + active + ", airline_ID=" + airline_ID + ", alias=" + alias + ", callsign="
