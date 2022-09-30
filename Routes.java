@@ -1,4 +1,3 @@
-import javax.print.DocFlavor.INPUT_STREAM;
 
 class Routes{
     private String airlineCode;
@@ -39,6 +38,7 @@ class Routes{
         return destinationAairportID;
     }
 
+// A constructor.
     public Routes(String airlineCode, String airlineID, String sourceairportCode, String sourceairportID,
             String destinationAirportcode, String destinationAairportID, Integer stops) {
         this.airlineCode = airlineCode;
@@ -51,16 +51,6 @@ class Routes{
     }
 
     private String codeshare;
-    
-
-
-
-    
-
-
-   
-    
-
 
     private String equipment;
 

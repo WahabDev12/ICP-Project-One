@@ -10,6 +10,7 @@ public class Node {
     public Node(Airports state) {
         this.state = state;
     }
+    // Creating a new node with the parent, flight, stops, and state.
     public Node(Node parent, String flight, Integer stops, Airports state) {
         this.parent = parent;
         this.flight = flight;
