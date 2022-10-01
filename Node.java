@@ -12,6 +12,7 @@ public class Node {
     private Airports state;
     
     
+// Creating a new node with the state of the airport.
     public Node(Airports state) {
         this.state = state;
     }
@@ -23,16 +24,39 @@ public class Node {
         this.stops = stops;
         this.state = state;
     }
+
+/**
+ * This function returns the parent of the current node
+ * 
+ * @return The parent node of the current node.
+ */
     public Node getParent() {
         return parent;
     }
+
+/**
+ * It returns the flight number.
+ * 
+ * @return The flight number.
+ */
     public String getFlight() {
         return flight;
     }
+
+/**
+ * This function returns the number of stops
+ * 
+ * @return The stops variable is being returned.
+ */
     public Integer getStops() {
         return stops;
     }
    
+/**
+ * This function returns the state of the airport
+ * 
+ * @return The state of the airport.
+ */
     public Airports getState() {
         return state;
     }

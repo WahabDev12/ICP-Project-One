@@ -20,19 +20,39 @@ public class SearchAlgo {
 // airport city, the airport country and the iata.
     private Airports startAirport;
     private Airports destinationAirport;
-
+    private FileWriter outputWriter;
+/**
+ * This function returns the startAirport variable
+ * 
+ * @return The startAirport object.
+ */
     public Airports getStartAirport() {
         return startAirport;
     }
 
+/**
+ * This function sets the startAirport variable to the value of the startAirport parameter
+ * 
+ * @param startAirport The airport where the flight starts
+ */
     public void setStartAirport(Airports startAirport) {
         this.startAirport = startAirport;
     }
 
+/**
+ * This function returns the destination airport of the flight
+ * 
+ * @return The destination airport.
+ */
     public Airports getDestinationAirport() {
         return destinationAirport;
     }
 
+/**
+ * This function sets the destination airport of the flight
+ * 
+ * @param destinationAirport Airports
+ */
     public void setDestinationAirport(Airports destinationAirport) {
         this.destinationAirport = destinationAirport;
     }
@@ -41,19 +61,19 @@ public class SearchAlgo {
 
 
  /**
-    Reading the input file and the airport file and then it is splitting the input file into two parts,
-    the start city and the destination city. Then it is reading the airport file and it is splitting
-    the airport file into 5 parts, the airport id, the airport name, the airport city, the airport
-    country and the iata. Then it is checking if the airport city is equal to the start city and if it
-    is then it is setting the start airport to the airport id, the airport name, the airport city, the
-    airport country and the iata. Then it is checking if the airport city is equal to the destination
-    city and if it is then it is setting the destination airport to the airport id, the airport name,
-    the airport city, the airport country and the iata.
+    * Reading the input file and the airport file and then it is splitting the input file into two parts,
+    * the start city and the destination city. Then it is reading the airport file and it is splitting
+    * the airport file into 5 parts, the airport id, the airport name, the airport city, the airport
+    * country and the iata. Then it is checking if the airport city is equal to the start city and if it
+    * is then it is setting the start airport to the airport id, the airport name, the airport city, the
+    * airport country and the iata. Then it is checking if the airport city is equal to the destination
+    * city and if it is then it is setting the destination airport to the airport id, the airport name,
+    * the airport city, the airport country and the iata.
  */
     public SearchAlgo(String inputSrc, String outputSrc) throws IOException{
         FileReader inputReader = new FileReader(inputSrc);
         FileReader airportReader = new FileReader("airports.csv");
-        FileWriter outputWriter = new FileWriter(outputSrc);
+        outputWriter = new FileWriter(String.format("%s_output.txt",inputSrc.replace(".txt", "")));
         BufferedReader inputData = new BufferedReader(inputReader);
         BufferedReader airportData = new BufferedReader(airportReader);
         String[] startData = inputData.readLine().split(",");
@@ -110,6 +130,8 @@ public class SearchAlgo {
         }
         return actions;
     }
+
+
 /**
  * It reads a csv file and returns an object of type Airports if the airportId or airportCode matches
  * the airportId or airportCode in the csv file
@@ -192,8 +214,7 @@ public class SearchAlgo {
  * @param solution Stack of nodes that represent the solution path
  */
     public void printToFile(Stack<Node> solution) throws IOException{
-        FileWriter outpuWriter = new FileWriter("output.txt");
-        BufferedWriter br = new BufferedWriter(outpuWriter);
+        BufferedWriter br = new BufferedWriter(outputWriter);
         while(!solution.isEmpty()){
             Node node = solution.pop();
             if(node.getParent() != null){
@@ -223,7 +244,6 @@ public class SearchAlgo {
 
         catch(NumberFormatException nfe){
             nfe.getStackTrace();
-            
         }
 
        

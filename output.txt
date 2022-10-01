@@ -1,3 +1,1 @@
-O4 from TKD to ACC
-AA from ACC to LHR
-PK from LHR to \N
+O4 from ACC to TKD

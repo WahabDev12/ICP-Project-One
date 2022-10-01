@@ -98,46 +98,111 @@ class Airports{
     private int altitude;
     private int timezone ;
 
+// This is a constructor. It is used to create an object of the class.
     public Airports(Integer airportId, String airportName, String city, String country, String iata) {
             this.airportID = airportId;
             this.airportName = airportName;
             this.city = city;
             this.country = country;
             this.iata = iata;
-            }
+    }
 
             
 
+/**
+ * This function returns the airportID of the airport
+ * 
+ * @return The airportID is being returned.
+ */
     public Integer getAirportID() {
         return airportID;
     }
+
+/**
+ * It returns the name of the airport.
+ * 
+ * @return The airport name.
+ */
     public String getAirportName() {
         return airportName;
     }
+    
+/**
+ * It returns the city of the person.
+ * 
+ * @return The city of the address.
+ */
     public String getCity() {
         return city;
     }
+
+/**
+ * This function returns the country of the user
+ * 
+ * @return The country variable is being returned.
+ */
     public String getCountry() {
         return country;
     }
+
+/**
+ * It returns the IATA code of the airport.
+ * 
+ * @return The iata variable is being returned.
+ */
     public String getIata() {
         return iata;
     }
+
+/**
+ * It returns the icao.
+ * 
+ * @return The icao variable is being returned.
+ */
     public int getIcao() {
         return icao;
     }
+
+/**
+ * This function returns the latitude of the location.
+ * 
+ * @return The latitude of the location.
+ */
     public int getLatitude() {
         return latitude;
     }
+
+/**
+ * This function returns the longitude of the location
+ * 
+ * @return The longitude of the location.
+ */
     public int getLongitude() {
         return longitude;
     }
+
+/**
+ * This function returns the altitude of the plane
+ * 
+ * @return The altitude of the plane.
+ */
     public int getAltitude() {
         return altitude;
     }
+
+/**
+ * This function returns the timezone of the current location.
+ * 
+ * @return The timezone.
+ */
     public int getTimezone() {
         return timezone;
     }
+/**
+ * It returns the source of the current object.
+ * 
+ * @return The source of the article.
+ */
     public String getSource() {
         return source;
     }
