@@ -1,3 +1,7 @@
+/**
+ * @author Abdul Wahab Abass 
+ */
+
 class Airports{
 /**
  * The hashCode() method returns a hash code value for the object

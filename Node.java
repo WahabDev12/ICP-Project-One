@@ -1,3 +1,8 @@
+/**
+ * @author Abdul Wahab Abass 
+ */
+
+
 import java.util.Stack;
 
 public class Node {
@@ -10,6 +15,7 @@ public class Node {
     public Node(Airports state) {
         this.state = state;
     }
+
     // Creating a new node with the parent, flight, stops, and state.
     public Node(Node parent, String flight, Integer stops, Airports state) {
         this.parent = parent;
@@ -46,6 +52,7 @@ public class Node {
         }
         return solution;
     }
+
     /**
      * The function takes in a list of flights, a list of nodes, and a list of nodes that have been
      * visited. It then creates a new list of nodes that are the children of the nodes in the list of
@@ -57,6 +64,7 @@ public class Node {
     public String toString() {
         return "Node [flight=" + flight + ", parent=" + parent + ", state=" + state + ", stops=" + stops + "]";
     }
+
     /**
      * The hashCode() function returns a unique integer for each unique object
      * 
@@ -69,6 +77,7 @@ public class Node {
         result = prime * result + ((state == null) ? 0 : state.hashCode());
         return result;
     }
+    
    /**
     * If the two objects are the same, return true. If the object is null, return false. If the two
     * objects are not the same class, return false. If the two objects are the same class, return true
