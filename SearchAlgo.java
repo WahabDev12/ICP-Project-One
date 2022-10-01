@@ -1,6 +1,6 @@
 /**
  * @author Abdul Wahab Abass 
- */
+*/
 
 import java.io.* ;
 import java.util.HashSet;
@@ -51,9 +51,6 @@ public class SearchAlgo {
         this.destinationAirport = destinationAirport;
     }
 
-
-
-
  /**
     * Reading the input file and the airport file and then it is splitting the input file into two parts,
     * the start city and the destination city. Then it is reading the airport file and it is splitting
@@ -96,9 +93,6 @@ public class SearchAlgo {
         inputData.close();
         airportData.close();
     }
-    
-
-
 
 /**
      * It takes in a start and end airport, and returns a node that contains the path from the start to the
@@ -123,13 +117,13 @@ public class SearchAlgo {
             for(Routes route: DataReader.getActions(Integer.toString(node.getState().getAirportID()))){
                 try{
                     System.out.println(route);
-                    Node neighbour = new Node(node, route.getAirlineCode(), route.getStops(), DataReader.getAirports(route.getDestinationAirportcode(), route.getDestinationAairportID()));
+                    Node neighbor = new Node(node, route.getAirlineCode(), route.getStops(), DataReader.getAirports(route.getDestinationAirportcode(), route.getDestinationAairportID()));
                     // System.out.println(route.getSourceairportCode());
-                    if(neighbour.getState().getIata().equals(end.getIata())){
-                        return neighbour;
+                    if(neighbor.getState().getIata().equals(end.getIata())){
+                        return neighbor;
                     }
-                    if(!explored.contains(neighbour.getState().getIata()) && !frontier.contains(neighbour)){
-                        frontier.add(neighbour);
+                    if(!explored.contains(neighbor.getState().getIata()) && !frontier.contains(neighbor)){
+                        frontier.add(neighbor);
                     }
                 }catch(NullPointerException npe){
                     npe.printStackTrace();
@@ -140,9 +134,6 @@ public class SearchAlgo {
         }
         return null;
     }
-
-
-
 
 /**
  * The main function is the entry point of the program. It creates a new PathFinding object, and then

@@ -27,7 +27,6 @@ public class DataReader {
             String airportCountry = lineList[3];
             String iata = lineList[4];
 
-
             if(iata.equals(airportId)){
                 return new Airports(airportId2, airportName, airportCity, airportCountry, iata);
             }
@@ -39,7 +38,6 @@ public class DataReader {
         }
         return null;
 
-        
     }
 
     /**
